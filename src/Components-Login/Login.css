@@ -524,3 +524,187 @@ body,
   border-radius: 50%;
   background: #8fa0c0;
 }
+
+@media (max-width: 1199px) {
+  html,
+  body,
+  #root {
+    height: auto;
+    min-height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    container-type: normal;
+  }
+
+  .ims-login-page {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    transform: none;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ims-login-page::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ims-login-left {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 28px 24px 32px;
+    background: linear-gradient(180deg, #5c7298 0%, #8b9bb6 58%, #d7deea 100%);
+  }
+
+  .ims-title,
+  .ims-login-illustration-title,
+  .ims-login-illustration-desc,
+  .active-intern-card,
+  .active-intern-card-1,
+  .active-intern-card-2,
+  .active-intern-card-3,
+  .login-illustration-img,
+  .quote-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .ims-login-illustration-title,
+  .ims-login-illustration-desc,
+  .quote-text p,
+  .quote-text span {
+    white-space: normal;
+  }
+
+  .ims-login-illustration-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ims-login-illustration-desc {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .active-intern-card {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .login-illustration-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: 280px;
+    align-self: center;
+    object-fit: contain;
+  }
+
+  .quote-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    box-sizing: border-box;
+  }
+
+  .login-right {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 32px 24px 40px;
+    background: #fff;
+  }
+
+  .email-label,
+  .divider-line,
+  .ims-login-google-btn,
+  .footer-links {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .ims-login-page {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .ims-login-left {
+    flex: 1 1 46%;
+    width: auto;
+    min-width: 0;
+  }
+
+  .login-right {
+    flex: 1 1 54%;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 899px) {
+  .ims-login-illustration-title,
+  .login-welcome-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .login-welcome-text {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .active-intern-card h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .login-illustration-img {
+    max-height: 200px;
+  }
+
+  .ims-login-left,
+  .login-right {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ims-title-text h3 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

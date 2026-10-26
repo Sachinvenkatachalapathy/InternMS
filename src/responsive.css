@@ -1,0 +1,368 @@
+/* Phones, tablets, and small laptops. Laptop and large-screen layouts stay on the 1920 canvas. */
+
+@media (max-width: 1199px) {
+  html,
+  body,
+  #root {
+    height: auto;
+    min-height: 100svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #root {
+    container-type: normal;
+  }
+
+  .ims-login-page,
+  .ims-forgot-page,
+  .ims-otp-page,
+  .ims-reset-page,
+  .ims-success-page,
+  .ims-reg-page {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: 100svh;
+    transform: none;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ims-login-page::before,
+  .ims-forgot-page::before,
+  .ims-otp-page::before,
+  .ims-reset-page::before,
+  .ims-success-page::before,
+  .ims-reg-page::before {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ims-login-left,
+  .ims-forgot-panel,
+  .ims-otp-panel,
+  .ims-reset-panel,
+  .ims-success-panel,
+  .ims-reg-left {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 28px 24px 32px;
+    background: linear-gradient(180deg, #5c7298 0%, #8b9bb6 58%, #d7deea 100%);
+  }
+
+  .ims-title,
+  .ims-login-illustration-title,
+  .ims-login-illustration-desc,
+  .active-intern-card,
+  .active-intern-card-1,
+  .active-intern-card-2,
+  .active-intern-card-3,
+  .login-illustration-img,
+  .quote-card,
+  .ims-forgot-brand,
+  .ims-forgot-title,
+  .ims-forgot-desc,
+  .ims-forgot-art,
+  .ims-forgot-note,
+  .ims-otp-brand,
+  .ims-otp-title,
+  .ims-otp-desc,
+  .ims-otp-art,
+  .ims-otp-note,
+  .ims-reset-brand,
+  .ims-reset-title,
+  .ims-reset-desc,
+  .ims-reset-art,
+  .ims-reset-note,
+  .ims-success-brand,
+  .ims-success-title,
+  .ims-success-desc,
+  .ims-success-art,
+  .ims-success-note {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  .ims-login-illustration-title,
+  .ims-login-illustration-desc,
+  .ims-forgot-title,
+  .ims-otp-title,
+  .ims-reset-title,
+  .ims-success-title,
+  .quote-text p,
+  .quote-text span,
+  .ims-forgot-notebody,
+  .ims-otp-notebody,
+  .ims-reset-notebody,
+  .ims-success-notebody {
+    white-space: normal;
+  }
+
+  .ims-login-illustration-title,
+  .ims-forgot-title,
+  .ims-otp-title,
+  .ims-reset-title,
+  .ims-success-title,
+  .ims-reg-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .ims-login-illustration-desc,
+  .ims-forgot-desc,
+  .ims-otp-desc,
+  .ims-reset-desc,
+  .ims-success-desc,
+  .ims-reg-lead {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .active-intern-card {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .login-illustration-img,
+  .ims-forgot-art,
+  .ims-otp-art,
+  .ims-reset-art,
+  .ims-success-art {
+    width: min(100%, 420px);
+    height: auto;
+    max-height: 280px;
+    align-self: center;
+    object-fit: contain;
+  }
+
+  .quote-card,
+  .ims-forgot-note,
+  .ims-otp-note,
+  .ims-reset-note,
+  .ims-success-note {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    box-sizing: border-box;
+  }
+
+  .login-right,
+  .ims-forgot-form,
+  .ims-otp-form,
+  .ims-reset-form,
+  .ims-success-form,
+  .ims-reg-form {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 32px 24px 40px;
+    background: #fff;
+  }
+
+  .ims-reg-form {
+    max-width: 860px;
+    justify-content: flex-start;
+  }
+
+  .ims-success-copy {
+    width: 100%;
+  }
+
+  .email-label {
+    margin-top: 28px;
+  }
+
+  .divider-line,
+  .ims-login-google-btn,
+  .footer-links,
+  .ims-success-login,
+  .ims-forgot-back {
+    margin-top: 28px;
+  }
+
+  .ims-reg-left {
+    color: #fff;
+  }
+
+  .ims-reg-art-wrap {
+    width: auto;
+    height: auto;
+    align-self: center;
+    overflow: visible;
+  }
+
+  .ims-reg-art {
+    width: min(240px, 70vw);
+    height: auto;
+    margin: 0;
+  }
+
+  .ims-reg-features,
+  .ims-reg-quote,
+  .ims-reg-feature {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  .ims-reg-field {
+    width: 100%;
+  }
+
+  .ims-reg-grid {
+    row-gap: 16px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .ims-login-page,
+  .ims-forgot-page,
+  .ims-otp-page,
+  .ims-reset-page,
+  .ims-success-page,
+  .ims-reg-page {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .ims-login-left,
+  .ims-forgot-panel,
+  .ims-otp-panel,
+  .ims-reset-panel,
+  .ims-success-panel,
+  .ims-reg-left {
+    flex: 1 1 46%;
+    width: auto;
+    min-width: 0;
+  }
+
+  .login-right,
+  .ims-forgot-form,
+  .ims-otp-form,
+  .ims-reset-form,
+  .ims-success-form,
+  .ims-reg-form {
+    flex: 1 1 54%;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 899px) {
+  .ims-login-illustration-title,
+  .ims-forgot-title,
+  .ims-otp-title,
+  .ims-reset-title,
+  .ims-success-title,
+  .ims-reg-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .login-welcome-text,
+  .ims-forgot-heading,
+  .ims-otp-heading,
+  .ims-reset-heading,
+  .ims-success-heading,
+  .ims-reg-heading {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .active-intern-card h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .login-illustration-img,
+  .ims-forgot-art,
+  .ims-otp-art,
+  .ims-reset-art,
+  .ims-success-art {
+    max-height: 200px;
+  }
+
+  .ims-login-left,
+  .ims-forgot-panel,
+  .ims-otp-panel,
+  .ims-reset-panel,
+  .ims-success-panel,
+  .ims-reg-left,
+  .login-right,
+  .ims-forgot-form,
+  .ims-otp-form,
+  .ims-reset-form,
+  .ims-success-form,
+  .ims-reg-form {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .ims-otp-codes {
+    gap: 8px;
+  }
+
+  .ims-otp-digit {
+    height: 52px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .ims-otp-badges {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .ims-reg-field {
+    width: 100%;
+  }
+
+  .ims-reg-grid {
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ims-title-text h3,
+  .ims-forgot-brandname,
+  .ims-otp-brandname,
+  .ims-reset-brandname,
+  .ims-success-brandname,
+  .ims-brand-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .ims-otp-digit {
+    height: 46px;
+    font-size: 18px;
+  }
+}

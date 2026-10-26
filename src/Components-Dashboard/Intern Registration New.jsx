@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Intern Registration New.css';
-import { Brand } from '../Components-Resuable/Login Internship';
+import { Brand } from '../Components-Resuable/Internship';
 import illustration from '../assets/Dashboard/Intern-Illustration.png';
 import verifiedIcon from '../assets/Dashboard/Verified.png';
 import trackingIcon from '../assets/Dashboard/Tracking.png';

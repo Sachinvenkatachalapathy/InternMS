@@ -1,4 +1,4 @@
-import './Login Internship.css';
+import './Internship.css';
 import logo from '../assets/Dashboard/Logo.png';
 
 export function Brand() {

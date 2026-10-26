@@ -494,9 +494,13 @@ body,
   color: #222;
 }
 
-.ims-login-create-acc a {
+.ims-login-create-acc button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
   color: #12275a;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer-links {

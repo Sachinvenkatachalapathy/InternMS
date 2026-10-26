@@ -185,7 +185,8 @@ export function Login() {
         </button>
 
         <p className="ims-login-create-acc">
-          Don't have an account? <a href="#">Create Account</a>
+          Don't have an account?{' '}
+          <button type="button" onClick={() => navigate('/intern-registration')}>Create Account</button>
         </p>
 
         <div className="footer-links">

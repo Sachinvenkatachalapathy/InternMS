@@ -1,5 +1,5 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider,Navigate } from 'react-router-dom';
 import { Login } from './Components-Login/Login';
 import { ForgetPassword } from './Components-Login/Forget Password';
 import { OtpForgetPassword } from './Components-Login/OTP Forget Password';
@@ -8,6 +8,10 @@ import { PasswordResetSuccess } from './Components-Login/Password Reset Success'
 import { InternRegistrationNew } from './Components-Dashboard/Intern Registration New';
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Navigate to="/login" replace />,
+  },
   {
     path: '/login',
     element: <Login />,

@@ -26,7 +26,7 @@ export function ForgetPassword() {
           <img className="ims-forgot-logo" src={graduationcap} alt="Internship Management System" />
           <div className="ims-forgot-brandtext">
             <h3 className="ims-forgot-brandname">Internship Management System</h3>
-            <p className="ims-forgot-tagline">Learn • Grow • Build Your Future</p>
+            <p className="ims-forgot-tagline">Learn <span className="ims-tagline-dot"></span> Grow <span className="ims-tagline-dot"></span> Build Your Future</p>
           </div>
         </div>
 
@@ -44,7 +44,7 @@ export function ForgetPassword() {
         <img className="ims-forgot-art" src={illustration} alt="Account recovery" />
 
         <div className="ims-forgot-note">
-          <img className="ims-forgot-noteicon" src={shield} alt="" />
+          <img className="ims-forgot-noteicon" src={shield} alt="shield" />
           <div className="ims-forgot-notetext">
             <p className="ims-forgot-notebody">
               All password reset requests are cryptographically signed and logged according to institutional
@@ -62,7 +62,7 @@ export function ForgetPassword() {
 
       <form className="ims-forgot-form" onSubmit={handleSend}>
         <div className="ims-forgot-lock">
-          <img src={lockreset} alt="" />
+          <img src={lockreset} alt="lockreset" />
         </div>
 
         <h2 className="ims-forgot-heading">Forgot Password?</h2>
@@ -80,7 +80,7 @@ export function ForgetPassword() {
           onClick={() => setMethod('email')}
         >
           <span className="ims-forgot-methodicon">
-            <img src={emailIcon} alt="" />
+            <img src={emailIcon} alt="emailIcon" />
           </span>
           <span className="ims-forgot-methodtext">
             <span className="ims-forgot-methodtitle">Email Verification</span>
@@ -95,7 +95,7 @@ export function ForgetPassword() {
           onClick={() => setMethod('sms')}
         >
           <span className="ims-forgot-methodicon ims-forgot-phone">
-            <img src={phone} alt="" />
+            <img src={phone} alt="phone" />
           </span>
           <span className="ims-forgot-methodtext">
             <span className="ims-forgot-methodtitle">SMS / Text Message</span>
@@ -106,11 +106,11 @@ export function ForgetPassword() {
 
         <button type="submit" className="ims-forgot-send">
           Send Verification Code
-          <img src={rightarrow} alt="" />
+          <img src={rightarrow} alt="rightarrow" />
         </button>
 
         <button type="button" className="ims-forgot-back" onClick={() => navigate('/login')}>
-          <img src={backarrow} alt="" />
+          <img src={backarrow} alt="backarrow" />
           Back to Login
         </button>
       </form>

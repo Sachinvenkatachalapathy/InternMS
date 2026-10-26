@@ -1,23 +1,73 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+:root {
+  --fit: min(calc(100svw / 1920px), calc(100svh / 1080px));
+}
+
+.ims-tagline-dot {
+  display: inline;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  vertical-align: inherit;
+}
+
+.ims-tagline-dot::before {
+  content: "\2022";
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+}
+
+#root {
+  position: relative;
+  container-type: size;
 }
 
 
 .ims-login-page {
-  position: relative;
-  width: 1920px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max(1920px, calc(100svw / var(--fit)));
   height: 1080px;
+  transform-origin: top left;
+  transform: scale(var(--fit));
   overflow: hidden;
   text-align: left;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(90deg, #566b99 0%, #8a9aba 30%, #c3cadb 52%, #f2f3f8 68%, #fdfdfd 82%);
+  background: #fff;
+}
+
+.ims-login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  background: linear-gradient(270deg, #FFFFFF 35%, #566B94 93%);
+  pointer-events: none;
 }
 
 .ims-login-left {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1320px;
+  width: 1152px;
   height: 1080px;
 }
 
@@ -33,16 +83,15 @@ body {
 .ims-title-logo {
   width: 44px;
   height: 44px;
+  display: grid;
+  place-items: center;
   border-radius: 10px;
   background: #1a6b8a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .ims-title-logo img {
   width: 24px;
-  height: 24px;
+  height: auto;
 }
 
 .ims-title-text h3 {
@@ -138,7 +187,7 @@ body {
 
 .active-intern-trend img {
   width: 14px;
-  height: 14px;
+  height: auto;
 }
 
 .active-intern-trend.green { color: #16a34a; }
@@ -172,17 +221,15 @@ body {
 .quote-text-sheild-img {
   width: 48px;
   height: 48px;
-  flex-shrink: 0;
+  display: grid;
+  place-items: center;
   border-radius: 10px;
   background: #12275a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .quote-text-sheild-img img {
   width: 24px;
-  height: 24px;
+  height: auto;
 }
 
 .quote-text p {
@@ -211,7 +258,7 @@ body {
 .login-right {
   position: absolute;
   top: 166px;
-  left: 1350px;
+  right: 82px;
   width: 604px;
 }
 
@@ -241,10 +288,10 @@ body {
 }
 
 .ims-login-forgot {
-border: none;
-background: transparent;
-padding: 0;
-cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 
 .email-label {
@@ -286,6 +333,7 @@ cursor: pointer;
   left: 13px;
   width: 20px;
   height: 20px;
+  object-fit: contain;
 }
 
 .ims-eye-icon {
@@ -294,7 +342,37 @@ cursor: pointer;
   right: 15px;
   width: 22px;
   height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
   cursor: pointer;
+  display: block;
+  line-height: 0;
+  overflow: visible;
+}
+
+.ims-eye-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.ims-eye-shut {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  overflow: visible;
+  background: url('../assets/Login/Eye shut.png') center / contain no-repeat;
+}
+
+.ims-eye-closed .ims-eye-shut {
+  display: block;
 }
 
 .login-password-row {
@@ -327,6 +405,15 @@ cursor: pointer;
   margin: 0;
 }
 
+.ims-login-error {
+  margin: 16px 0 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: #d12b2b;
+}
+
 .ims-login-signin-btn {
   display: flex;
   align-items: center;
@@ -348,7 +435,7 @@ cursor: pointer;
 
 .ims-login-signin-btn img {
   width: 16px;
-  height: 16px;
+  height: auto;
 }
 
 .divider-line {
@@ -379,7 +466,7 @@ cursor: pointer;
 
 .ims-login-google-btn img {
   width: 20px;
-  height: 20px;
+  height: auto;
 }
 
 .ims-login-google-btn {

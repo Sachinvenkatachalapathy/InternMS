@@ -15,7 +15,7 @@ export const PasswordResetSuccess = () => {
           <img className="ims-success-logo" src={graduationcap} alt="Internship Management System" />
           <div className="ims-success-brandtext">
             <h3 className="ims-success-brandname">Internship Management System</h3>
-            <p className="ims-success-tagline">Learn • Grow • Build Your Future</p>
+            <p className="ims-success-tagline">Learn <span className="ims-tagline-dot"></span> Grow <span className="ims-tagline-dot"></span> Build Your Future</p>
           </div>
         </div>
 
@@ -33,7 +33,7 @@ export const PasswordResetSuccess = () => {
         <img className="ims-success-art" src={illustration} alt="Account secured" />
 
         <div className="ims-success-note">
-          <img className="ims-success-noteicon" src={shield} alt="" />
+          <img className="ims-success-noteicon" src={shield} alt="shield" />
           <div className="ims-success-notetext">
             <p className="ims-success-notebody">
               “Credential change verified across university registrars, Dean approvals, and enterprise partner portals.”
@@ -50,7 +50,7 @@ export const PasswordResetSuccess = () => {
         <div className="ims-success-mark" aria-hidden="true" />
 
         <p className="ims-success-status">
-          <img src={recovery} alt="" />
+          <img src={recovery} alt="recovery" />
           Recovery Completed • 256-Bit Encrypted
         </p>
 

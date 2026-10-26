@@ -39,7 +39,7 @@ export const ResetPassword = () => {
           <img className="ims-reset-logo" src={graduationcap} alt="Internship Management System" />
           <div className="ims-reset-brandtext">
             <h3 className="ims-reset-brandname">Internship Management System</h3>
-            <p className="ims-reset-tagline">Learn • Grow • Build Your Future</p>
+            <p className="ims-reset-tagline">Learn <span className="ims-tagline-dot"></span> Grow <span className="ims-tagline-dot"></span> Build Your Future</p>
           </div>
         </div>
 
@@ -53,7 +53,7 @@ export const ResetPassword = () => {
         <img className="ims-reset-art" src={illustration} alt="Set a strong master password" />
 
         <div className="ims-reset-note">
-          <img className="ims-reset-noteicon" src={shield} alt="" />
+          <img className="ims-reset-noteicon" src={shield} alt="shield" />
           <div className="ims-reset-notetext">
             <p className="ims-reset-notebody">
               “Automated credential audit enforces strict NIST 800 63B password guidelines and institutional
@@ -72,7 +72,7 @@ export const ResetPassword = () => {
 
       <form className="ims-reset-form" onSubmit={handleUpdate}>
         <div className="ims-reset-lock">
-          <img src={lockreset} alt="" />
+          <img src={lockreset} alt="lockreset" />
         </div>
 
         <h2 className="ims-reset-heading">Set New Password</h2>
@@ -86,7 +86,7 @@ export const ResetPassword = () => {
           New Password
         </label>
         <div className="ims-reset-field">
-          <img className="ims-reset-fieldicon" src={lockIcon} alt="" />
+          <img className="ims-reset-fieldicon" src={lockIcon} alt="lockIcon" />
           <input
             id="ims-new-password"
             type="password"
@@ -104,7 +104,7 @@ export const ResetPassword = () => {
           Confirm New Password
         </label>
         <div className="ims-reset-field">
-          <img className="ims-reset-fieldicon" src={shieldCheck} alt="" />
+          <img className="ims-reset-fieldicon" src={shieldCheck} alt="shieldCheck" />
           <input
             id="ims-confirm-password"
             type="password"
@@ -133,7 +133,7 @@ export const ResetPassword = () => {
 
         <button type="submit" className="ims-reset-update">
           Update Password
-          <img src={rightarrow} alt="" />
+          <img src={rightarrow} alt="rightarrow" />
         </button>
 
         <button type="button" className="ims-reset-back" onClick={() => navigate('/login')}>

@@ -9,11 +9,13 @@ import handshake from '../assets/Login/Handshake.png';
 import rightarrow from '../assets/Login/Sendarrow.png';
 const CODE_LENGTH = 6;
 
+
 export function OtpForgetPassword() {
   const navigate = useNavigate();
   const inputs = useRef([]);
   const [digits, setDigits] = useState(() => Array(CODE_LENGTH).fill(''));
   const [seconds, setSeconds] = useState(55);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (seconds <= 0) return undefined;
@@ -27,6 +29,7 @@ export function OtpForgetPassword() {
     const next = digits.slice();
     next[index] = value;
     setDigits(next);
+    setError('');
   };
 
   const handleChange = (index, event) => {
@@ -50,13 +53,20 @@ export function OtpForgetPassword() {
       next[index] = char;
     });
     setDigits(next);
+    setError('');
     inputs.current[Math.min(text.length, CODE_LENGTH) - 1].focus();
   };
 
   const handleVerify = (event) => {
-    event.preventDefault();
-    navigate('/reset-password');
-  };
+  event.preventDefault();
+  const code = digits.join('');
+  if (code.length !== CODE_LENGTH || digits.some((d) => d === '')) {
+    setError('Please enter all 6 digits.');
+    return;
+  }
+  setError('');
+  navigate('/reset-password');
+};
 
   return (
     <div className="ims-otp-page">
@@ -65,7 +75,7 @@ export function OtpForgetPassword() {
           <img className="ims-otp-logo" src={graduationcap} alt="Internship Management System" />
           <div className="ims-otp-brandtext">
             <h3 className="ims-otp-brandname">Internship Management System</h3>
-            <p className="ims-otp-tagline">Learn • Grow • Build Your Future</p>
+            <p className="ims-otp-tagline">Learn <span className="ims-tagline-dot"></span> Grow <span className="ims-tagline-dot"></span> Build Your Future</p>
           </div>
         </div>
 
@@ -83,7 +93,7 @@ export function OtpForgetPassword() {
         <img className="ims-otp-art" src={illustration} alt="Identity verification" />
 
         <div className="ims-otp-note">
-          <img className="ims-otp-noteicon" src={shield} alt="" />
+          <img className="ims-otp-noteicon" src={shield} alt="shield" />
           <div className="ims-otp-notetext">
             <p className="ims-otp-notebody">
               “Credential change verified across university registrars, Dean approvals, and enterprise partner portals.”
@@ -124,9 +134,15 @@ export function OtpForgetPassword() {
           ))}
         </div>
 
+        {error ? (
+          <p className="ims-otp-error" role="alert">
+            {error}
+          </p>
+        ) : null}
+
         <button type="submit" className="ims-otp-verify">
           Verify and Continue
-          <img src={rightarrow} alt="" />
+          <img src={rightarrow} alt="rightarrow" />
         </button>
 
         <p className="ims-otp-resend">
@@ -141,11 +157,11 @@ export function OtpForgetPassword() {
 
         <div className="ims-otp-badges">
           <span className="ims-otp-badge">
-            <img className="ims-otp-badgeicon" src={lock} alt="" />
+            <img className="ims-otp-badgeicon" src={lock} alt="lock" />
             End-to-end encrypted
           </span>
           <span className="ims-otp-badge">
-            <img className="ims-otp-badgeicon" src={handshake} alt="" />
+            <img className="ims-otp-badgeicon" src={handshake} alt="handshake" />
             Secure handshake
           </span>
         </div>

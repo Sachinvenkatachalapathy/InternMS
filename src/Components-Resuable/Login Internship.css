@@ -1,0 +1,54 @@
+.ims-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ims-brand-logo {
+  display: flex;
+  width: 52px;
+  height: auto;
+  object-fit: contain;
+}
+
+.ims-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ims-brand-title {
+  display: flex;
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.ims-brand-tagline {
+  display: flex;
+  align-items: center;
+  margin: 2px 0 0;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.ims-brand-dot {
+  display: flex;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.ims-brand-dot::before {
+  content: "\2022";
+}

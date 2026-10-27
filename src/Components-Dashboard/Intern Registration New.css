@@ -1,42 +1,33 @@
 .ims-reg-page {
-  display: flex;
   width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: #fff;
-  color: #12275a;
-  text-align: left;
-}
-
-.ims-reg-left,
-.ims-reg-form {
-  box-sizing: border-box;
+  max-width: 1920px;
+  height: 100vh;
+  max-height: 100vh;
+  background: linear-gradient(to left, #FFFFFF 40%, #566B94 93%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
 }
 
 .ims-reg-left {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  width: 40%;
+  width: 50%;
   padding: 40px;
-  background: #566b93;
   color: #fff;
 }
 
 .ims-reg-title {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
-  line-height: 50px;
-  color: #fff;
+  font-size: 26px;
+  color: #ffff;
 }
 
 .ims-reg-lead {
   margin: 18px 0 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 28px;
-  color: #fff;
+  font-size: 14px;
+  color: #ffff;
 }
 
 .ims-reg-art-wrap {
@@ -45,8 +36,8 @@
 }
 
 .ims-reg-art {
-  width: 200px;
-  height: auto;
+  width: auto;
+  height: 250px;
 }
 
 .ims-reg-features {
@@ -57,25 +48,21 @@
 
 .ims-reg-feature {
   display: flex;
-  align-items: center;
+  align-items: self-start;
   gap: 16px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 18px;
-  background: #e2e6ec;
+  background: #FFFFFFBF;
   color: #132a56;
 }
 
 .ims-reg-feature-icon {
-  width: 24px;
+  width: 18px;
   height: auto;
 }
 
 .ims-reg-feature-title {
   display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #132a56;
 }
 
 .ims-reg-feature-text {
@@ -94,7 +81,6 @@
 
 .ims-reg-quote-text {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 14px;
   line-height: 20px;
@@ -112,8 +98,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   overflow: hidden;
   border-radius: 50%;
   background: #fff;
@@ -126,9 +112,7 @@
 }
 
 .ims-reg-quote-name {
-  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  line-height: 16px;
   color: #fff;
 }
 
@@ -136,31 +120,27 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 60%;
+  width: 50%;
   padding: 40px 48px;
 }
 
 .ims-reg-heading {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 40px;
   color: #132a56;
 }
 
 .ims-reg-sub {
   margin: 6px 0 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   color: #777587;
 }
 
 .ims-reg-label,
 .ims-reg-required {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -170,10 +150,6 @@
   gap: 4px;
   margin-bottom: 6px;
   color: #111c2d;
-}
-
-.ims-reg-kicker {
-  text-transform: uppercase;
 }
 
 .ims-reg-required {
@@ -190,13 +166,12 @@
 .ims-reg-select-input {
   box-sizing: border-box;
   width: 100%;
-  height: 46px;
+  height: 40px;
   padding: 0 14px;
   border: 1px solid #d5dbe3;
   border-radius: 8px;
   background: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #111c2d;
   outline: none;
 }
@@ -212,7 +187,8 @@
 }
 
 .ims-reg-phone,
-.ims-reg-password {
+.ims-reg-password,
+.ims-reg-email {
   display: flex;
   align-items: center;
   height: 46px;
@@ -230,23 +206,46 @@
 }
 
 .ims-reg-phone .ims-reg-input,
-.ims-reg-password .ims-reg-input {
+.ims-reg-password .ims-reg-input,
+.ims-reg-email .ims-reg-input {
   flex: 1;
+  min-width: 0;
   height: 100%;
   border: 0;
   border-radius: 0;
 }
 
 .ims-reg-phone:focus-within,
-.ims-reg-password:focus-within {
+.ims-reg-password:focus-within,
+.ims-reg-email:focus-within {
   border-color: #12275a;
+}
+
+.ims-reg-verify {
+  flex-shrink: 0;
+  height: 26px;
+  margin-right: 8px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #12275a;
+  font-size: 12px;
+  line-height: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ims-reg-verified {
+  background: #16803c;
 }
 
 .ims-reg-password button {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -258,6 +257,10 @@
   grid-area: 1 / 1;
   width: 22px;
   height: 22px;
+}
+
+.ims-reg-eye-open {
+  object-fit: contain;
 }
 
 .ims-reg-eye-shut {
@@ -326,12 +329,14 @@
 
 .ims-reg-submit {
   width: 100%;
-  height: 48px;
+  height: 52px;
+  margin-top: 24px;
+  flex-shrink: 0;
   border: 0;
   border-radius: 8px;
   background: #12275a;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
 }
@@ -340,8 +345,7 @@
 .ims-reg-signin {
   margin: 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   color: #777587;
 }
@@ -354,7 +358,6 @@
 
 .ims-reg-error {
   margin: 4px 0 0;
-  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   line-height: 16px;
   color: #e11d48;
@@ -362,6 +365,7 @@
 
 .ims-reg-invalid > .ims-reg-input,
 .ims-reg-invalid .ims-reg-select-input,
+.ims-reg-invalid .ims-reg-email,
 .ims-reg-invalid .ims-reg-phone,
 .ims-reg-invalid .ims-reg-password,
 .ims-reg-invalid .ims-reg-upload {

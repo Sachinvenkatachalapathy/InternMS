@@ -44,7 +44,6 @@ export function Login() {
 
   return (
     <div className="ims-login-page">
-      
       <div className="ims-login-left">
         <div className="ims-title">
           <div className="ims-title-logo">
@@ -109,7 +108,6 @@ export function Login() {
         </div>
       </div>
 
-      
       <form className="login-right" noValidate onSubmit={handleSignIn}>
         <h2 className="login-welcome-text">Welcome Back</h2>
         <p className="login-welcome-text-sub">Manage your career journey</p>
